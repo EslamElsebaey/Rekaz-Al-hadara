@@ -267,19 +267,19 @@ nav{
 
 
 @include max-992 {
+    .header-content{
+        flex-wrap: wrap;
+    }
     .service-order{
         width: 100%;
         justify-content: center;
         text-align: center;
     }
     .callUs-btn{
-        padding:  7px 40px;
+        padding:  6px 35px;
     }
     .top-header{
         display: none;
-    }
-    .header-content{
-        flex-wrap: wrap;
     }
     .logo {
         img {
@@ -289,8 +289,8 @@ nav{
 }
 
 @include max-768 {
-    .call-sec{
-        text-align: center;
+    .header-content{
+        flex-wrap: nowrap;
     }
     .li-drop .ul-drop li a:hover {
         background-color: transparent;
@@ -299,7 +299,7 @@ nav{
         display: flex;
         align-items: center;
     }
-    .service-order{
+    .service-order .lang{
         display: none;
     }
    
@@ -314,10 +314,6 @@ nav{
         margin-inline-start : 8px ;
     }
     nav {
-        .callUs-btn{
-            padding : 10px 60px ;
-            margin-top : 30px
-        }
         .lang{
             margin-inline-end: 0;
         }

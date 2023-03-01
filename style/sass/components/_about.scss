@@ -4,7 +4,7 @@
 .about-desc{
     background-color: $main-color;
     width: 50%;
-    padding: 102px 120px 102px 70px;
+    padding: 105px 0;
     position: relative;
     .about-shape{
         position: absolute;
@@ -95,13 +95,36 @@ html[dir="ltr"]{
     }
 }
 
+.mycontainer{
+    padding: 0 15px;
+    margin-inline-start: auto;
+}
 
+
+
+
+
+@include min-768 {
+    .mycontainer{
+        max-width: 360px;
+    }
+}
+
+@include min-992{
+    .mycontainer{
+        max-width: 480px;
+    }
+}
+
+
+@include min-1200{
+    .mycontainer{
+     max-width: 570px;
+    }
+}
 
 
 @include max-1200{
-    .about-desc {
-        padding:60px 50px 60px 30px;
-    }
     .about-readmore{
         position: relative;
         z-index: 5;
@@ -112,15 +135,16 @@ html[dir="ltr"]{
     .about-desc  .about-shape{
         display: none;
     }
-    .about-desc{
-        padding: 40px 30px 40px 30px;
-    }
     .about-text{
         max-width: 100%;
+    }
+    .about-desc{
+        padding: 80px 0;
     }
 }
 
 @include max-768{
+
     .counter-item{
         display: flex;
         flex-direction: column;
@@ -129,7 +153,7 @@ html[dir="ltr"]{
     .about-desc{
         width: 100%;
         text-align: center;
-        padding: 50px 20px 0px 20px;
+        padding: 50px 0 0 0 ;
     }
     .about-title{
         font-size: 18px;

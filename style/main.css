@@ -257,7 +257,7 @@ img {
 }
 @media only screen and (max-width: 991px) {
   body {
-    padding-top: 127px;
+    padding-top: 125px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -533,27 +533,27 @@ nav {
 }
 
 @media only screen and (max-width: 991px) {
+  .header-content {
+    flex-wrap: wrap;
+  }
   .service-order {
     width: 100%;
     justify-content: center;
     text-align: center;
   }
   .callUs-btn {
-    padding: 7px 40px;
+    padding: 6px 35px;
   }
   .top-header {
     display: none;
-  }
-  .header-content {
-    flex-wrap: wrap;
   }
   .logo img {
     height: 80px;
   }
 }
 @media only screen and (max-width: 767px) {
-  .call-sec {
-    text-align: center;
+  .header-content {
+    flex-wrap: nowrap;
   }
   .li-drop .ul-drop li a:hover {
     background-color: transparent;
@@ -562,7 +562,7 @@ nav {
     display: flex;
     align-items: center;
   }
-  .service-order {
+  .service-order .lang {
     display: none;
   }
   html[dir=ltr] .nav-ul > li a {
@@ -575,10 +575,6 @@ nav {
     padding-bottom: 0;
     -webkit-margin-start: 8px;
             margin-inline-start: 8px;
-  }
-  nav .callUs-btn {
-    padding: 10px 60px;
-    margin-top: 30px;
   }
   nav .lang {
     -webkit-margin-end: 0;
@@ -1075,7 +1071,7 @@ nav {
 .about-desc {
   background-color: #945f37;
   width: 50%;
-  padding: 102px 120px 102px 70px;
+  padding: 105px 0;
   position: relative;
 }
 .about-desc .about-shape {
@@ -1165,10 +1161,28 @@ html[dir=ltr] .about-desc .about-shape {
   transform: scaleX(-1);
 }
 
-@media only screen and (max-width: 1199px) {
-  .about-desc {
-    padding: 60px 50px 60px 30px;
+.mycontainer {
+  padding: 0 15px;
+  -webkit-margin-start: auto;
+          margin-inline-start: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .mycontainer {
+    max-width: 360px;
   }
+}
+@media only screen and (min-width: 992px) {
+  .mycontainer {
+    max-width: 480px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .mycontainer {
+    max-width: 570px;
+  }
+}
+@media only screen and (max-width: 1199px) {
   .about-readmore {
     position: relative;
     z-index: 5;
@@ -1178,11 +1192,11 @@ html[dir=ltr] .about-desc .about-shape {
   .about-desc .about-shape {
     display: none;
   }
-  .about-desc {
-    padding: 40px 30px 40px 30px;
-  }
   .about-text {
     max-width: 100%;
+  }
+  .about-desc {
+    padding: 80px 0;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -1194,7 +1208,7 @@ html[dir=ltr] .about-desc .about-shape {
   .about-desc {
     width: 100%;
     text-align: center;
-    padding: 50px 20px 0px 20px;
+    padding: 50px 0 0 0;
   }
   .about-title {
     font-size: 18px;
@@ -1432,7 +1446,7 @@ html[dir=ltr] .message button {
     margin-top: 0;
   }
   .quick-drop li {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
   .contact .quick-drop li:first-of-type {
     padding-top: 14px;
