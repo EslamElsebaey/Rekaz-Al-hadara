@@ -1531,6 +1531,10 @@ html[dir=ltr] .message button {
      object-fit: cover;
 }
 
+html[dir=ltr] .banner-desc {
+  width: 50%;
+}
+
 .mainBanner .mainslider-item {
   position: relative;
 }
@@ -1612,12 +1616,25 @@ html[dir=ltr] .message button {
   opacity: 1;
 }
 
+@media only screen and (max-width: 1199px) {
+  html[dir=ltr] .banner-desc {
+    width: 65%;
+  }
+}
+@media only screen and (max-width: 991px) {
+  html[dir=ltr] .banner-desc {
+    width: 80%;
+  }
+}
 @media only screen and (max-width: 767px) {
   .mainBanner .swiper-horizontal > .swiper-pagination-bullets, .mainBanner .swiper-pagination-bullets.swiper-pagination-horizontal, .mainBanner .swiper-pagination-custom, .mainBanner .swiper-pagination-fraction {
     bottom: 2px;
   }
   .mainBanner .swiper-button-prev, .mainBanner .swiper-rtl .swiper-button-next, .mainBanner .swiper-button-next, .mainBanner .swiper-rtl .swiper-button-prev {
     display: none;
+  }
+  html[dir=ltr] .banner-desc {
+    width: 100%;
   }
   .banner-desc h1 {
     font-size: 18px;
