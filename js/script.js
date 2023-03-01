@@ -1,11 +1,10 @@
 $(document).ready(function(){
      // preloader
-     setTimeout(function () {
       $(".preloader").css({
         opacity : "0" , 
         visibility : "hidden" , 
       })
-    }, 2000);
+    
 
 
 
