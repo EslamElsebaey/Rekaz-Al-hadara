@@ -18,7 +18,7 @@ $(document).ready(function(){
 const mainSwiper = new Swiper('.mainBanner .mainSwiper', {
   loop: true,
   draggable: true,
-  // autoplay: true,
+  autoplay: true,
   navigation: {
     nextEl: ' .mainBanner .swiper-button-next',
     prevEl: '.mainBanner .swiper-button-prev',
@@ -48,7 +48,7 @@ const mainSwiper = new Swiper('.mainBanner .mainSwiper', {
 // clients swiper
 const clientsSwiper = new Swiper('.clients .swiper', {
   loop: true,
-  // autoplay : true ,
+  autoplay : true ,
   pagination: {
     el: '.clients .swiper-pagination',
     clickable: true,
@@ -87,7 +87,7 @@ const clientsSwiper = new Swiper('.clients .swiper', {
 // news swiper
 const newsSwiper = new Swiper(' .news .swiper', {
   loop: true,
-  // autoplay: true,
+  autoplay: true,
   pagination: {
     el: '.news-parent .swiper-pagination',
     clickable: true,
@@ -112,7 +112,7 @@ const newsSwiper = new Swiper(' .news .swiper', {
 // projects swiper
 const projectsSwiper = new Swiper(' .projects .swiper', {
   loop: true,
-  // autoplay: true,
+  autoplay: true,
   pagination: {
     el: '.projects .swiper-pagination',
     clickable: true,
