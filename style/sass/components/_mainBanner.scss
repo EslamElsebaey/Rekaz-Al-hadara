@@ -1,0 +1,138 @@
+
+.mainBanner{
+    .mainBanner-parent{
+    position: relative;
+    height: 100%;
+    z-index: 3;
+   }
+   .mainslider-item {
+    height: 100%;
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+} 
+
+}
+
+
+
+.mainBanner{
+    .mainslider-item{
+        position: relative;
+    }
+    .swiper-button-prev, .swiper-rtl .swiper-button-next, .swiper-button-next, .swiper-rtl .swiper-button-prev{
+        width: 40px;
+        height: 40px;
+        background-color:rgba(0, 0, 0, 0.302);
+        border-radius: 50%;
+        transition: all linear 0.3s;
+        margin-top: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        &:hover{
+            background-color: $main-color;
+            i {
+                color: #fff;
+            }
+        }
+    }
+}
+
+
+
+
+.banner-desc{
+    padding: 0 20px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+   h1{
+    font-size: 40px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 700;
+    text-transform: capitalize;
+   }
+
+}
+
+.mainBanner{
+    figure{
+        position: relative;
+        margin: 0;
+        &::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: rgba($color: #333333, $alpha: 0.502);
+            z-index: 2;
+        }
+    }
+}
+
+
+
+.mainBanner{
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+        bottom: 30px;
+    }
+    .swiper-button-prev, .swiper-rtl .swiper-button-next{
+        left: 55px;
+    }
+    .swiper-button-next, .swiper-rtl .swiper-button-prev{
+        right: 55px;
+    }
+    .swiper-button-prev, .swiper-rtl .swiper-button-next, .swiper-button-next, .swiper-rtl .swiper-button-prev i {
+        font-size: 20px;
+    }
+    .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after , .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+        content: "";
+    }
+    .swiper-pagination-bullet{
+        opacity: 0.302;
+        background-color: #000000;
+    }
+    .swiper-pagination-bullet-active{
+        background-color: #fff;
+        opacity: 1;
+    }
+    
+}
+
+
+
+
+
+
+
+@include max-768 {
+    .mainBanner{
+        .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+            bottom: 2px;
+        }
+        .swiper-button-prev, .swiper-rtl .swiper-button-next, .swiper-button-next, .swiper-rtl .swiper-button-prev{
+            display: none;
+        }
+    }
+   
+    .banner-desc h1{
+        font-size: 18px;
+        line-height: 1.4;
+        padding: 0;
+    }
+   
+}
+
+

@@ -1,0 +1,272 @@
+body {
+  font-weight: 400;
+  font-style: normal;
+  font-family: 'Montserrat-Arabic' ;
+  padding-top: 107px;
+}
+
+
+html[dir = "rtl"] {
+  body{
+    text-align: right;
+  }
+}
+
+html[dir = "ltr"] {
+  body{
+    text-align: left;
+  }
+}
+
+
+
+.title-text {
+  line-height: 1.6;
+  font-size: 24px;
+  color: $main-color;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+
+
+img {
+  image-rendering: -webkit-optimize-contrast ;
+  object-fit: cover;
+}
+
+.ul-es {
+  list-style: none;
+  padding: 0;
+}
+
+// Swiper basic reset
+.clients , .news  , .projects{
+  .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after , .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+    content: "";
+ }
+}
+
+.clients , .news , .projects{
+  .swiper-button-next, .swiper-button-prev{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: rgba($color: #000 , $alpha: 0.302);
+    border-radius: 50%;
+    transition: all linear .2s;
+    &:hover{
+      background-color: $main-color;
+    }
+    i{
+      font-size: 20px;
+      color: #fff;
+    }
+  }
+  .swiper-button-prev, .swiper-rtl .swiper-button-next{
+    left: -60px;
+  }
+  .swiper-button-next, .swiper-rtl .swiper-button-prev{
+    right: -60px;
+  }
+}
+
+
+
+
+
+// Basic ancor 
+
+.ancor-btn {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  &:hover{
+    text-decoration: none;
+    color: black;
+  }
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  &:focus{
+    text-decoration: none;
+  }
+}
+
+
+// Scrollbar
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background:  $main-color;
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-track{
+  background-color:#fff;
+}
+
+
+// preloader
+
+
+.preloader {
+  pointer-events: none;
+  user-select: none;
+}
+.progress {
+  position: fixed;
+  z-index: 99999;
+  top: 0; 
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.progress-bar {
+  animation: progress 6s ease infinite;
+  background-color: $main-color;
+}
+@keyframes progress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+// Back to Top
+.toTop{
+  background-color: #fff;
+  filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.20));
+  cursor : pointer;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  right: 25px;
+  bottom: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  z-index: 10;
+  transition: all linear .3s;
+  opacity: 0;
+  visibility: hidden;
+  .toTop-icon{
+    font-size: 20px;
+    color: #000;
+      transition: all linear .2s;
+  }
+}
+
+  
+
+
+
+.showToTop{
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+
+
+// fixed whatsapp
+
+.fixed-whatsapp{
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 10;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:  #74cd5c;
+  animation-name: pulse;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
+  text-decoration: none;
+  &:focus{
+    text-decoration: none;
+  }
+  i {
+    font-size: 36px;
+    color: #ffffff;
+  }
+}
+
+
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 #74cd5c;
+	}
+	80% {
+		box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+	}
+}
+
+
+
+@include min-768 {
+  .toTop{
+    &:hover{
+      background-color:$main-color;
+      i{
+        color: #fff;
+      }
+     
+  }
+  }
+}
+
+@include max-992{
+  body {
+    padding-top: 127px;
+  }
+}
+
+
+@include max-768{
+  body {
+    padding-top: 59px;
+  }
+  .fixed-whatsapp{
+    width: 50px;
+    height: 50px;
+    i{
+      font-size: 30px;
+    }
+  }
+  .toTop{
+    right: 19px;
+    bottom: 84px;
+  }
+}
+
+
+
+
+
+
+
+

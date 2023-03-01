@@ -1,0 +1,31 @@
+.logo-height {
+height: 60px !important;
+}
+@include max-768{
+  html[dir="ltr"] nav {
+    clip-path: circle(11.2% at 86% 14%);
+  }
+  html[dir="ltr"] .reset-left {
+    clip-path: circle(122% at 86% 14%);
+  }
+    .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl{
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+    .title-text{
+      font-size: 17px;
+      margin-bottom: 25px;
+    }
+    .services , .clients , .news {
+      padding: 50px 0;
+    }
+     .projects  {
+      padding: 50px 0 70px 0;
+     }
+    .projects , .clients , .news {
+      .swiper-button-next, .swiper-button-prev{
+        display: none;
+      }
+    }
+  }
+  

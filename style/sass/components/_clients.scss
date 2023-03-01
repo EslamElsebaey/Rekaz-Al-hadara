@@ -1,0 +1,65 @@
+
+.clients{
+    padding: 95px 0 100px 0;
+     background-color: #f5f5f5;
+     .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+        bottom: -70px;
+     }
+     .swiper-button-prev, .swiper-rtl .swiper-button-next{
+        left: -70px;
+     }
+     .swiper-button-next, .swiper-rtl .swiper-button-prev{
+        right: -70px;
+     }
+    .clients-parent{
+        position: relative;
+        margin: 75px 0 50px 0;
+    }
+    .swiper-wrapper{
+        display: flex;
+        align-items: center;
+    }
+ }
+
+ .client-item a{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        width: auto;
+        opacity: 60%;
+        max-width: 100%;
+        filter: grayscale(1);
+        transition: all linear .2s;
+        &:hover{
+            filter: grayscale(0);
+            opacity: 1;
+        }
+    }
+ }
+
+ .clients{
+   .swiper-pagination-bullet{
+      background-color: #000;
+      opacity:0.302;
+   }
+   .swiper-pagination-bullet-active{
+      background-color: $main-color;
+      opacity: 1;
+   }
+ }
+
+ @include max-768 {
+
+   .clients .clients-parent{
+    margin: 35px 0;
+   }
+   .client-item a img{
+      opacity: 1;
+      filter: none;
+   }
+   .clients .swiper-horizontal > .swiper-pagination-bullets, .clients .swiper-pagination-bullets.swiper-pagination-horizontal, .clients .swiper-pagination-custom, .clients .swiper-pagination-fraction{
+      bottom: -60px;
+   }
+ }

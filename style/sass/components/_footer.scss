@@ -1,0 +1,308 @@
+html[dir = "ltr"]{
+    .message {
+        input {
+            padding: 0 50px 0 25px;
+        }
+    }
+}
+.footer-items{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+footer{
+    padding: 70px 0 45px 0;
+    background-color: #333333;
+    // overflow: hidden;
+    position: relative;
+    a:hover{
+        text-decoration: none;
+    }
+    .footer-title{
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 35px;
+    text-transform: capitalize;
+    }
+}
+
+
+
+.contact > ul {
+    li{
+        padding: 0;
+        display: flex;
+        align-items: center;
+        i{
+            color: #fff;
+            font-size: 18px;
+            text-align: center;
+        }
+        a{
+            margin-inline-start: 10px   ;
+            transition: all linear .2s;
+            font-size: 14px;
+            color: #ffffff;
+            font-weight: 400;
+            &:hover{
+                color:$main-color;
+            }
+        }
+    }
+    li:last-of-type {
+        margin-bottom: 0;
+        margin-top: 20px;
+    }
+}
+
+.newsletter{
+    p{
+        font-size: 14px;
+        color: #ffffff;
+        font-weight: 300;
+        margin: 0;
+        margin-bottom: 25px;
+    }
+}
+.footer-shape{
+    position: absolute;
+    bottom: 0;
+    inset-inline-end: 0;
+
+}
+
+
+.quick-drop  {
+    margin: 0;
+    li {
+        margin-bottom: 15px;
+        a{
+            font-size: 14px;
+            color: #b3b3b3;
+            font-weight: 300;
+           transition: all linear .2s;
+            &:hover{
+                color: $main-color;
+            }
+        }
+    }
+}
+
+.message {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    button {
+        position: absolute;
+        padding: 0;
+        inset-inline-end: 18px;
+        transform: translateY(-50%);
+        top: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    input{
+        width: 100%;
+        transition: all linear .3s;
+        height: 45px;
+        max-width: 100%;
+        background-color: #fff;
+        outline: none !important;
+        border: 1px solid transparent;
+        color: #000;
+        padding: 0 20px 0 50px;
+        font-size: 16px;
+        font-weight: 400;
+        &::-webkit-input-placeholder{
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #808080;
+            font-weight: 300;
+        }
+    }
+    .mail-icon{
+        font-size: 24px;
+        color:$main-color;
+    }
+}
+
+.social{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    > a{
+        margin-inline-start: 0 !important;
+        margin-inline-end: 10px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #4d4d4d;;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all linear .2s;
+        &:focus{
+            text-decoration: none;
+        }
+        &:hover{
+            background-color: $main-color;
+        }
+    }
+    i {
+        font-size: 22px !important;
+    }
+}
+html[dir="ltr"]{
+    .footer-shape{
+        transform: scaleX(-1);
+    }
+    .message button{
+        transform:  translateY(-50%) rotate(180deg); 
+    }
+}
+
+
+
+
+.tasawk-sec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        margin-inline-start: 5px;
+    }
+}
+
+
+.copyright{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 60px;
+    position: relative;
+    z-index: 2;
+    p{
+        font-size: 13px;
+        color: #ffffff;
+        font-weight: 300;
+        margin-bottom: 0;
+    }
+    .tasawk-logo{
+        margin-inline-start: 8px;
+    }
+}
+
+
+@include max-992{
+    .footer-shape{
+        display: none;
+    }
+    .footer-items{
+        flex-wrap: wrap;
+    }
+    .newsletter{
+        margin-top: 30px;
+    }
+}
+
+
+@include max-768 {
+    .quick-links , .services-links , .contact , .newsletter{
+        padding-bottom: 25px;
+    }
+   
+    .newsletter{
+        margin-top: 0;
+    }
+    .quick-drop li{
+        margin-bottom: 12px;
+    }
+   .contact .quick-drop li:first-of-type{
+    padding-top: 14px;
+   }
+    .quick-drop li:first-of-type{
+        padding-top: 12px;
+    }
+    .contact > ul li a:hover{
+        color: #fff;
+    }
+    .quick-drop li:last-of-type{
+       margin-bottom: 0;
+    }
+      .tasawk-sec{
+        margin-top: 5px;
+      }
+    .copyright{
+        display: block;
+        p {
+            font-size: 14px;
+        }
+    }
+    .quick-drop li a{
+        color: #fff;
+        &:hover{
+            color: #fff;
+        }
+    }
+    .contact ul li{
+        margin-bottom: 12px;
+    }
+    footer{
+        padding: 50px 0 35px 0;
+    }
+    .quick-drop , .contact ul , .newsletter .nested{
+        display: none;
+    }
+    .copyright{
+        margin-top: 30px;
+        text-align: center;
+    }
+    .message input{
+        &::placeholder{
+            font-size: 13px;
+        }
+    }
+    .newsletter p{
+        font-size: 15px;
+        margin-top: 14px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    footer .footer-title{
+        margin-bottom: 0;
+        text-transform: capitalize;
+        cursor: pointer;
+        font-size: 16px;
+        position: relative;
+        &::after {
+            font-size: 15px;
+            content: "\f107";
+            transition: all linear .3s;
+            font-family: "line Awesome free";
+            position: absolute;
+            inset-inline-end: 0;
+            top: 0;
+            font-weight: 900;
+        }
+    }
+    .arrow-rotate::after {
+        transform: translateY(-50%) rotate(180deg)  !important;
+        top: 10px !important;
+    }
+    .footer-items{
+        flex-direction: column;
+    }
+    .footer-items > * {
+        // margin-bottom: 25px;
+        width: 100%;
+    }
+    .contact > ul li:last-of-type {
+        margin-top : 0px ;
+    }
+   
+   
+}
+
