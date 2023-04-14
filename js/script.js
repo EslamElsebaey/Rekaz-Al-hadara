@@ -1,12 +1,7 @@
-window.onload = function () {
-  // preloader
-  setTimeout(function () {
-    $(".preloader").css({
-      opacity : "0" , 
-      visibility : "hidden" , 
-    })
-  }, 1000);
-};
+
+$(window).on("load", function () {
+  $(".preloader").fadeOut();
+})
 
 
 
